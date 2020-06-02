@@ -1,0 +1,13 @@
+.TopPanel {
+    position: absolute;
+    top: 0;
+    bottom: 30vh;
+    left: 15vw;
+    right: 15vw;
+    min-width: 300px;
+    overflow-y: auto;
+}
+
+body {
+    background: #18203A;
+}

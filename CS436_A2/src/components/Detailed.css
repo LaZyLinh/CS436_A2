@@ -1,0 +1,9 @@
+.detailedBox {
+    position: relative;
+    background: lightsteelblue;
+    color: #18203A;
+    padding: 10px 30px;
+    left: 9%;
+    width: 70%;
+    border-radius: 5px;
+}
