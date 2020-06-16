@@ -3,8 +3,27 @@ import '../index.css';
 import { combineReducers } from 'redux';
 
 
-let jsonObj = ["This is message number one!", "This is another message!", "I love cats!",
-    "Could probably die for them", "How do people come up with messages...?"];
+let jsonObj = [{
+    "userName": "Jack",
+    "message": "Hello!"
+},
+    {
+        "userName": "Emily",
+        "message": "How are you~"
+    },
+    {
+        "userName": "Lisa",
+        "message": "I'm tired"
+    },
+    {
+        "userName": "Rose",
+        "message": "I'm bored"
+    },
+    {
+        "userName": "Jennie",
+        "message": "I'm sleepy"
+    }
+];
 
 const counterReducer = (list = jsonObj, action) => {
     if (action.type === 'ADD_MSG') {

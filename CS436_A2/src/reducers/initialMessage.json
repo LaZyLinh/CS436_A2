@@ -1,0 +1,21 @@
+[{
+    "userName": "Jack",
+    "message": "Hello!"
+},
+    {
+        "userName": "Emily",
+        "message": "How are you~"
+    },
+    {
+        "userName": "Lisa",
+        "message": "I'm tired"
+    },
+    {
+        "userName": "Rose",
+        "message": "I'm bored"
+    },
+    {
+        "userName": "Jennie",
+        "message": "I'm sleepy"
+    }
+]

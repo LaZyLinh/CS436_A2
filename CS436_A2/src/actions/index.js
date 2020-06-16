@@ -19,3 +19,10 @@ export const deleteMsg = msgId => {
     }
 };
 
+export const chooseUser = userName => {
+    return {
+        type: 'CHOOSE_USER',
+        chooseUser: userName
+    }
+};
+

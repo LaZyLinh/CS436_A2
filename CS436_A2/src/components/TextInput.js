@@ -6,14 +6,20 @@ import './TextInput.css';
 class TextInput extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {
+            userName: "",
+            value: ""};
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleName = this.handleName.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
         this.setState({value: event.target.value});
+    }
+    handleName(event) {
+        this.setState({userName: event.target.value});
     }
 
     handleSubmit(event) {
@@ -21,14 +27,21 @@ class TextInput extends React.Component {
             event.preventDefault();
             return;
         }
-        this.props.addMsg(this.state.value);
-        this.setState({value: ""});
+        this.props.addMsg({"userName": this.state.userName,
+            "message": this.state.value});
+        this.setState({userName: "", value: ""});
         event.preventDefault();
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit} className="form">
+                <label style={{color: "white"}}>
+                    Name
+                    <br/>
+                    <input value={this.state.userName} onChange={this.handleName} />
+                    <br/>
+                </label>
                 <label style={{color: "white"}}>
                     Message
                     <textarea rows="10" cols="20" className="textarea" value={this.state.value} onChange={this.handleChange} />

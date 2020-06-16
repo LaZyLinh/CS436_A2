@@ -40,15 +40,15 @@ class TopPanel extends React.Component {
     render() {
         let msgList = [];
         let i = 0;
-        for (const message of this.props.list) {
+        for (const item of this.props.list) {
             msgList.push(
                 <div id={i++} className="msg"
-                 ref={this.textList} onClick={this.selectDiv}>{message}
+                 ref={this.textList} onClick={this.selectDiv}>{item.message}
                     <button className="delete" onClick={this.delete}>X</button>
                 </div>
             );
             if (i === this.state.currentId) {
-                msgList.push(<div ref={this.textList}><Detailed id={i}/></div>);
+                msgList.push(<div ref={this.textList}><Detailed id={i} name={item.userName}/></div>);
             }
         }
         msgList.push(

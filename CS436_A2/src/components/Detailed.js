@@ -7,6 +7,7 @@ class Detailed extends React.Component {
     constructor(props) {
         super(props);
         this.id = this.props.id;
+        this.name = this.props.name;
         // this.state = {shown: false};
     }
     render() {
@@ -14,8 +15,7 @@ class Detailed extends React.Component {
             return null;
         }
         return (
-            <div className="detailedBox"> This is message number {this.props.msgId} <br/>
-                The message is: {this.props.list[+this.props.msgId - 1]}</div>
+            <div className="detailedBox"> This message is from {this.props.name}</div>
         )
     };
 
